@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 COPY package.json .
 RUN npm install
 COPY . .
-RUN ./node_modules/.bin/bower install
+RUN ./node_modules/.bin/bower install --allow-root option
 EXPOSE 3000
 CMD ["npm", "start"]
